@@ -1,5 +1,86 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>About Page</h1>
+<h2>{{ page_title }}</h2>
+
+{% for member in company %}
+<div class="row featurette">
+    <h3>{{ member.name }}</h3>
+    <p>{{ member.description }}</p>
+    {% if member.image_course %}
+    <img src="{{ member.image_course }}" alt="{{ member.name }}" class="featurette-image">
+    {% endif %}
+</div>
+{% endfor %}
+
+<p>
+    Sagacity was born out of a vision for wisdom and insight in a world cluttered with noise. It started as an idea
+    in the heart of a city teeming with innovation. The founder, inspired by ancient sages and modern thinkers
+    alike, wanted to create a space where discernment and sound judgment were at the forefront of every decision.
+
+    Sagacity isnt just a business; its a sanctuary for those who seek depth and clarity. It offers consulting
+    services that help other companies navigate the complexities of their industries with keen mental discernment
+    and strategic foresight. Sagacity provides training programs to cultivate sagacity within individuals and teams,
+    ensuring they make wise, informed decisions.
+
+    It entails a commitment to continuous learning, embracing diverse perspectives, and applying that knowledge to
+    real-world challenges. The essence of Sagacity is found in its dedication to fostering a culture of thoughtful
+    leadership and insightful problem-solving. Its where the timeless wisdom of the past meets the dynamic needs of
+    the present.
+</p>
+<div class="row featurette">
+    <div class="col-md-7">
+        <h3>
+            MR. Bjorn Bishop
+        </h3>
+        <p>
+            Having lived and thrived across continents—from the bustling streets of Qatar to the serene landscapes
+            of Malawi, and from the historic sites of Israel to the innovative hubs of Sweden—I bring a wealth of
+            global experience to Sagacity. My journey has seen me navigate diverse industries such as Hospitality,
+            Sales, Business Management, Investment Brokerage, and IT Consultant Brokerage.
+            <hr>
+
+            In founding Sagacity, my mission is to create a vibrant portal where freelancers can find meaningful
+            consulting assignments in Sweden. Sagacity isnt just a platform; its a beacon of wisdom and
+            opportunity, embodying the keen insight and sound judgment that my international adventures have taught
+            me. Here, we believe in the continuous growth and development of every individual, making each
+            consulting gig more than just a job—its a step towards personal and professional excellence.
+            <hr>
+
+            Join me in this journey, as we harness the collective wisdom and diverse experiences of our global
+            community to shape a brighter, more insightful future. Together, well build a network where expertise
+            meets opportunity, fostering a culture of mutual growth and success.
+        </p>
+    </div>
+    <div class="col-md-5">
+        <img src="https://image.lexica.art/full_jpg/bded4634-a570-4331-b8d6-b6abf7a57b98" alt="human paladin">
+    </div>
+</div>
+
+<div class="row featurette">
+    <div class="col-md-5">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2bffe17a-8faf-4f07-b053-adb2c9ed63b1/dgwdd08-ad1ffad5-9ea3-4dc3-b238-14c7373d269e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJiZmZlMTdhLThmYWYtNGYwNy1iMDUzLWFkYjJjOWVkNjNiMVwvZGd3ZGQwOC1hZDFmZmFkNS05ZWEzLTRkYzMtYjIzOC0xNGM3MzczZDI2OWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0pSPjdEyfTejfD1nMFV0GAQhRR5Jh2tYFFTc3GCN5Ko"
+            alt="Beatrice">
+    </div>
+    <div class="col-md-7">
+        <h3>Mrs Beatrice Karlsson</h3>
+        <p>
+            Hailing from the heart of Sweden, my partner brings a unique blend of local insight and global acumen to
+            Sagacity. With a dynamic career spanning Retail Sales, Business Development, UX Design, and E-commerce,
+            she has a keen eye for detail and an innate understanding of user experience that enhances our
+            platform's functionality and appeal.
+            <hr>
+
+            Her expertise in creating seamless and engaging digital experiences ensures that Sagacity remains
+            intuitive and user-friendly, catering to the needs of freelancers and businesses alike. As a vital
+            support function, she is dedicated to fostering an environment where innovation and growth are at the
+            forefront, helping every member of our community to thrive.
+            <hr>
+
+            Her Swedish roots coupled with her diverse professional background provide a balanced and insightful
+            approach, making Sagacity a truly exceptional platform for freelance consulting in Sweden.
+        </p>
+    </div>
+</div>
+
 {% endblock %}
